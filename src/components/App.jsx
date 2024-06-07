@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import ContactStats from './ContactStats/ContactStats';
 import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import SearchBox from './SearchBox/SearchBox';
@@ -19,6 +20,7 @@ const App = () => {
 
   return (
     <div className={css.container}>
+      <ContactStats />
       <ContactForm />
       <SearchBox />
       {isLoading && !error && <b className={css.requestsign}>Request in progress...</b>}
